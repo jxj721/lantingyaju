@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>兰亭雅居 - 环保木饰面定制专家</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#165DFF',
+            secondary: '#FF7D00',
+            dark: '#1D2129',
+            light: '#F2F3F5',
+          },
+          fontFamily: {
+            inter: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .bg-gradient-blue {
+        background: linear-gradient(135deg, #165DFF 0%, #0E42D2 100%);
+      }
+      .transition-transform-opacity {
+        transition-property: transform, opacity;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+      }
+      .scale-up-hover {
+        @apply hover:scale-105 transition-all duration-300;
+      }
+      .card-shadow {
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+      }
+    }
+    
+  </style>
+</head>
+<body class="font-inter text-dark bg-light">
+  <!-- 导航栏 -->
+  <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#" class="flex items-center space-x-2">
+        <div class=" text-white h-10 w-10 rounded-lg flex items-center justify-center">
+          <span class="font-bold text-xl"><img src="./images/ltyj.svg" width="80px" height="80px" ></span>
+        </div>
+        <span class="text-xl font-bold text-white text-shadow">兰亭雅居</span>
+      </a>
+      
+      <!-- 桌面导航 -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="#home" class="text-white hover:text-secondary transition-colors">首页</a>
+        <a href="#about" class="text-white hover:text-secondary transition-colors">公司简介</a>
+        <a href="#advantages" class="text-white hover:text-secondary transition-colors">核心优势</a>
+        <a href="#projects" class="text-white hover:text-secondary transition-colors">合作案例</a>
+        <a href="#social-media" class="text-white hover:text-secondary transition-colors">媒体展示</a>
+      </nav>
+      
+      <!-- 移动端菜单按钮 -->
+      <button id="menu-toggle" class="md:hidden text-white text-2xl">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+    
+    <!-- 移动端导航菜单 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+      <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+        <a href="#home" class="text-dark hover:text-primary py-2 border-b border-gray-100">首页</a>
+        <a href="#about" class="text-dark hover:text-primary py-2 border-b border-gray-100">公司简介</a>
+        <a href="#advantages" class="text-dark hover:text-primary py-2 border-b border-gray-100">核心优势</a>
+        <a href="#projects" class="text-dark hover:text-primary py-2 border-b border-gray-100">合作案例</a>
+        <a href="#social-media" class="text-dark hover:text-primary py-2">媒体展示</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 英雄区域 -->
+  <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="https://picsum.photos/id/1067/1920/1080" alt="环保木饰面展示" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-dark/50"></div>
+    </div>
+    <div class="container mx-auto px-4 z-10 text-center">
+      <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-bold text-white mb-6 leading-tight text-shadow">
+        专注环保木饰面<br>品牌个性定制
+      </h1>
+      <p class="text-[clamp(1rem,3vw,1.5rem)] text-white/90 mb-10 max-w-3xl mx-auto">
+        15年专业定制经验,为连锁酒店、餐饮品牌提供一站式环保木饰面解决方案
+      </p>
+      <a href="#contact" class="inline-block bg-secondary hover:bg-secondary/90 text-white font-medium py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+        立即咨询 <i class="fa fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+      <a href="#about" class="flex flex-col items-center">
+        <span class="mb-2">了解更多</span>
+        <i class="fa fa-chevron-down"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- 公司简介 -->
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-dark mb-4">公司简介</h2>
+        <div class="w-20 h-1 bg-primary mx-auto mb-8"></div>
+        <p class="text-gray-600 max-w-3xl mx-auto">兰亭雅居专注环保木饰面领域15年，致力于为客户提供高品质、个性化的装饰解决方案</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+          <h3 class="text-2xl font-bold text-primary mb-6">15年专注，铸就专业品质</h3>
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            兰亭雅居成立于2005年，15年来始终专注于环保木饰面领域，包括碳金板、木饰面、护墙板等产品的研发与生产。我们拥有专业的定制设计团队和先进的生产设备，为客户量身定制开模生产，提供一站式服务。
+          </p>
+          <p class="text-gray-700 mb-8 leading-relaxed">
+            目前，我们已经服务超过15000家客户，主要供应连锁品牌酒店、餐饮店，如全季酒店、橘子水晶酒店、漫心酒店、呷哺、鱼你在一起、七分甜等。我们的使命是让装修省心、省钱，少走弯路。
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <div class="flex items-center">
+              <div class="bg-primary/10 h-12 w-12 rounded-full flex items-center justify-center mr-3">
+                <i class="fa fa-check text-primary text-xl"></i>
+              </div>
+              <span class="font-medium">环保材料</span>
+            </div>
+            <div class="flex items-center">
+              <div class="bg-primary/10 h-12 w-12 rounded-full flex items-center justify-center mr-3">
+                <i class="fa fa-check text-primary text-xl"></i>
+              </div>
+              <span class="font-medium">个性定制</span>
+            </div>
+            <div class="flex items-center">
+              <div class="bg-primary/10 h-12 w-12 rounded-full flex items-center justify-center mr-3">
+                <i class="fa fa-check text-primary text-xl"></i>
+              </div>
+              <span class="font-medium">高效服务</span>
+            </div>
+          </div>
+        </div>
+        <div class="order-1 md:order-2 relative">
+          <img src="./images/boss.svg" alt="环保木饰面产品展示" class="w-full h-auto rounded-lg shadow-xl">
+          <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg hidden md:block">
+            <div class="flex items-center">
+              <div class="text-4xl font-bold text-primary mr-3">15+</div>
+              <div>
+                <div class="text-sm text-gray-500">专业服务</div>
+                <div class="font-medium">15年行业经验</div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -top-6 -right-6 bg-white p-4 rounded-lg shadow-lg hidden md:block">
+            <div class="flex items-center">
+              <div class="text-4xl font-bold text-primary mr-3">15000+</div>
+              <div>
+                <div class="text-sm text-gray-500">优质客户</div>
+                <div class="font-medium">服务超过15000家客户</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 核心优势 -->
+  <section id="advantages" class="py-20 bg-light">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-dark mb-4">核心优势</h2>
+        <div class="w-20 h-1 bg-primary mx-auto mb-8"></div>
+        <p class="text-gray-600 max-w-3xl mx-auto">我们凭借专业的团队、先进的设备和完善的服务，为客户提供卓越的装修解决方案</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- 优势1 -->
+        <div class="bg-white rounded-xl p-8 card-shadow scale-up-hover">
+          <div class="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mb-6">
+            <i class="fa fa-paint-brush text-primary text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">个性定制</h3>
+          <p class="text-gray-600">专注环保木饰面，提供碳金板、木饰面、护墙板等多种产品的品牌个性定制服务，满足不同客户需求。</p>
+        </div>
+        
+        <!-- 优势2 -->
+        <div class="bg-white rounded-xl p-8 card-shadow scale-up-hover">
+          <div class="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mb-6">
+            <i class="fa fa-users text-primary text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">专业团队</h3>
+          <p class="text-gray-600">拥有专业定制设计团队，为客户量身定制开模生产，提供从设计到施工的一站式解决方案。</p>
+        </div>
+        
+        <!-- 优势3 -->
+        <div class="bg-white rounded-xl p-8 card-shadow scale-up-hover">
+          <div class="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mb-6">
+            <i class="fa fa-building text-primary text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">优质客户</h3>
+          <p class="text-gray-600">服务超过15000+客户，主供连锁品牌酒店、餐饮店，积累了丰富的行业经验和良好口碑。</p>
+        </div>
+        
+        <!-- 优势4 -->
+        <div class="bg-white rounded-xl p-8 card-shadow scale-up-hover">
+          <div class="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center mb-6">
+            <i class="fa fa-line-chart text-primary text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">高效服务</h3>
+          <p class="text-gray-600">提供一站式服务，让项目快速落地，施工便捷，有效降低成本，为客户创造更大价值。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 合作案例 -->
+  <section id="projects" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-dark mb-4">合作案例</h2>
+        <div class="w-20 h-1 bg-primary mx-auto mb-8"></div>
+        <p class="text-gray-600 max-w-3xl mx-auto">我们与众多知名品牌建立了长期合作关系，以下是部分代表性案例</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 案例1 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg group">
+          <div class="relative overflow-hidden">
+            <img src="./images/qjjd.svg" alt="全季酒店装修案例" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <span class="text-white font-medium">查看详情</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">全季酒店</h3>
+            <p class="text-gray-600 mb-4">为全季酒店多个门店提供环保木饰面定制服务，打造高品质舒适的住宿环境。</p>
+            <div class="flex items-center text-sm text-gray-500">
+              <span class="mr-4"><i class="fa fa-map-marker mr-1"></i> 全国连锁</span>
+              <span><i class="fa fa-calendar mr-1"></i> 2025年</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 案例2 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg group">
+          <div class="relative overflow-hidden">
+            <img src="./images/jpjp.svg" alt="呷哺餐饮装修案例" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <span class="text-white font-medium">查看详情</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">呷哺餐饮</h3>
+            <p class="text-gray-600 mb-4">为呷哺多家门店提供木饰面定制，打造时尚、环保的用餐环境，提升品牌形象。</p>
+            <div class="flex items-center text-sm text-gray-500">
+              <span class="mr-4"><i class="fa fa-map-marker mr-1"></i> 全国连锁</span>
+              <span><i class="fa fa-calendar mr-1"></i> 2023年</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 案例3 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg group">
+          <div class="relative overflow-hidden">
+            <img src="./images/qft.svg" alt="七分甜装修案例" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <span class="text-white font-medium">查看详情</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">七分甜</h3>
+            <p class="text-gray-600 mb-4">为七分甜连锁门店提供个性化木饰面设计与安装，营造温馨舒适的甜品消费空间。</p>
+            <div class="flex items-center text-sm text-gray-500">
+              <span class="mr-4"><i class="fa fa-map-marker mr-1"></i> 全国连锁</span>
+              <span><i class="fa fa-calendar mr-1"></i> 2023年</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="#" class="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white font-medium py-3 px-8 rounded-full transition-all duration-300">
+          查看更多案例 <i class="fa fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 社交媒体视频展示 -->
+  <section id="social-media" class="py-20 bg-gradient-blue text-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-4">关注我们</h2>
+        <div class="w-20 h-1 bg-white mx-auto mb-8"></div>
+        <p class="text-white/80 max-w-3xl mx-auto">关注我们的社交媒体账号，了解更多产品信息和装修案例</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- 快手 -->
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 scale-up-hover">
+          <div class="flex items-center mb-6">
+            <div class="bg-white h-12 w-12 rounded-full flex items-center justify-center mr-4">
+              <i class="fa fa-play-circle text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold">快手</h3>
+          </div>
+          <div class="aspect-video bg-black/20 rounded-lg mb-4 overflow-hidden">
+            <!-- 视频占位图 -->
+            <img src="./images/ks.svg" alt="快手视频预览" class="w-full h-full object-cover">
+          </div>
+          <p class="text-white/80 mb-4">查看我们在快手上的最新产品展示和装修案例视频</p>
+          <a href="https://www.kuaishou.com/profile/3xbcrjz8yp9hdwy" class="inline-block text-white border-b border-white/50 hover:border-white transition-colors">
+            进入主页 <i class="fa fa-external-link ml-1"></i>
+          </a>
+        </div>
+        
+        <!-- 抖音 -->
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 scale-up-hover">
+          <div class="flex items-center mb-6">
+            <div class="bg-white h-12 w-12 rounded-full flex items-center justify-center mr-4">
+              <i class="fa fa-music text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold">抖音</h3>
+          </div>
+          <div class="aspect-video bg-black/20 rounded-lg mb-4 overflow-hidden">
+            <!-- 视频占位图 -->
+            <img src="./images/dy.svg" alt="抖音视频预览" class="w-full h-full object-cover">
+          </div>
+          <p class="text-white/80 mb-4">关注我们的抖音账号，获取更多环保木饰面的创意应用和装修技巧</p>
+          <a href="https://www.douyin.com/user/MS4wLjABAAAAzJKefuOCU9htQUfz3yP6A0O0W2_fbulP6NYEWJggkwY?from_tab_name=main&is_search=0&list_name=follow&nt=0" class="inline-block text-white border-b border-white/50 hover:border-white transition-colors">
+            进入主页 <i class="fa fa-external-link ml-1"></i>
+          </a>
+        </div>
+        
+        <!-- 小红书 -->
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 scale-up-hover">
+          <div class="flex items-center mb-6">
+            <div class="bg-white h-12 w-12 rounded-full flex items-center justify-center mr-4">
+              <i class="fa fa-book text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold">小红书</h3>
+          </div>
+          <div class="aspect-video bg-black/20 rounded-lg mb-4 overflow-hidden">
+            <!-- 视频占位图 -->
+            <img src="./images/xhs.svg" alt="小红书视频预览" class="w-full h-full object-cover">
+          </div>
+          <p class="text-white/80 mb-4">在小红书上查看我们的装修灵感分享和产品使用指南</p>
+          <a href="https://www.xiaohongshu.com/user/profile/6872050e000000000d02e2a4?xsec_token=ABBfp4EQQ6U8ARLNaFIFsMGKxu2D1TCDM9YlVi0PW0D4I%3D&xsec_source=pc_search" class="inline-block text-white border-b border-white/50 hover:border-white transition-colors">
+            进入主页 <i class="fa fa-external-link ml-1"></i>
+          </a>
+        </div>
+        
+        <!-- 视频号 -->
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 scale-up-hover">
+          <div class="flex items-center mb-6">
+            <div class="bg-white h-12 w-12 rounded-full flex items-center justify-center mr-4">
+              <i class="fa fa-video-camera text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold">视频号</h3>
+          </div>
+          <div class="aspect-video bg-black/20 rounded-lg mb-4 overflow-hidden">
+            <!-- 视频占位图 -->
+            <img src="./images/sph.svg" alt="视频号视频预览" class="w-full h-full object-cover">
+          </div>
+          <p class="text-white/80 mb-4">微信视频号上的独家内容，带你了解更多关于环保木饰面的知识</p>
+          <a href="#" class="inline-block text-white border-b border-white/50 hover:border-white transition-colors">
+            进入主页 <i class="fa fa-external-link ml-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系我们 -->
+  <section id="contact" class="py-20 bg-light">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-dark mb-4">联系我们</h2>
+        <div class="w-20 h-1 bg-primary mx-auto mb-8"></div>
+        <p class="text-gray-600 max-w-3xl mx-auto">如果您对我们的产品或服务感兴趣，欢迎随时与我们联系</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <h3 class="text-2xl font-bold text-primary mb-6">商务咨询</h3>
+            <form>
+              <div class="mb-6">
+                <label for="name" class="block text-gray-700 mb-2">姓名</label>
+                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors" placeholder="请输入您的姓名">
+              </div>
+              <div class="mb-6">
+                <label for="phone" class="block text-gray-700 mb-2">电话</label>
+                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors" placeholder="请输入您的联系电话">
+              </div>
+              <div class="mb-6">
+                <label for="message" class="block text-gray-700 mb-2">留言</label>
+                <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors" placeholder="请输入您的需求或问题"></textarea>
+              </div>
+              <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300">
+                提交咨询 <i class="fa fa-paper-plane ml-2"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        
+        <div>
+          <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+            <h3 class="text-2xl font-bold text-primary mb-6">联系方式</h3>
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="bg-primary/10 h-12 w-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <i class="fa fa-envelope text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-1">邮箱</h4>
+                  <p class="text-gray-600">fsj0721@foxmail.com</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-primary/10 h-12 w-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <i class="fa fa-phone text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-1">电话</h4>
+                  <p class="text-gray-600">13814863511</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-primary/10 h-12 w-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <i class="fa fa-weixin text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-1">微信</h4>
+                  <p class="text-gray-600">LanTingYaJu888</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-primary/10 h-12 w-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <i class="fa fa-map-marker text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-1">地址</h4>
+                  <p class="text-gray-600">江苏省苏州市吴中区香山街道陈华人家农家乐斜对面</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <h3 class="text-2xl font-bold text-primary mb-6">营业时间</h3>
+            <div class="space-y-4">
+              <div class="flex justify-between">
+                <span class="text-gray-600">周一至周五</span>
+                <span class="font-medium">9:00 - 18:00</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">周六</span>
+                <span class="font-medium">9:00 - 18:00</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">周日</span>
+                <span class="text-gray-500">不定时休息</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-dark text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-6">
+            <div class="bg-primary text-white h-10 w-10 rounded-lg flex items-center justify-center">
+              <span class="font-bold text-xl">兰</span>
+            </div>
+            <span class="text-xl font-bold">兰亭雅居</span>
+          </div>
+          <p class="text-gray-400 mb-6">专注环保木饰面15年，为您提供高品质、个性化的装饰解决方案</p>
+          <div class="flex space-x-4">
+            <a href="#" class="bg-white/10 h-10 w-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+              <i class="fa fa-weixin"></i>
+            </a>
+            <a href="#" class="bg-white/10 h-10 w-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+              <i class="fa fa-weibo"></i>
+            </a>
+            <a href="#" class="bg-white/10 h-10 w-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+              <i class="fa fa-instagram"></i>
+            </a>
+            <a href="#" class="bg-white/10 h-10 w-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+              <i class="fa fa-youtube-play"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-6">快速链接</h4>
+          <ul class="space-y-3">
+            <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">首页</a></li>
+            <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">公司简介</a></li>
+            <li><a href="#advantages" class="text-gray-400 hover:text-white transition-colors">核心优势</a></li>
+            <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors">合作案例</a></li>
+            <li><a href="#social-media" class="text-gray-400 hover:text-white transition-colors">媒体展示</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">联系我们</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-6">产品服务</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">碳金板</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">木饰面</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">护墙板</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">个性定制</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">一站式服务</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-6">联系信息</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fa fa-map-marker text-primary mt-1 mr-3"></i>
+              <span class="text-gray-400">江苏省苏州市吴中区香山街道陈华人家农家乐斜对面</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-phone text-primary mt-1 mr-3"></i>
+              <span class="text-gray-400">13814863511</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-envelope text-primary mt-1 mr-3"></i>
+              <span class="text-gray-400">fsj0721@foxmail.com</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-weixin text-primary mt-1 mr-3"></i>
+              <span class="text-gray-400">LanTingYaJu888</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+        <p>&copy; 2025 兰亭雅居. 保留所有权利.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 返回顶部按钮 -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 bg-primary text-white h-12 w-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 z-50">
+    <i class="fa fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // 导航栏滚动效果
+    const navbar = document.getElementById('navbar');
+    const backToTop = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 100) {
+        navbar.classList.add('bg-primary', 'shadow-md');
+        navbar.classList.remove('bg-transparent');
+        backToTop.classList.remove('opacity-0', 'invisible');
+        backToTop.classList.add('opacity-100', 'visible');
+      } else {
+        navbar.classList.remove('bg-primary', 'shadow-md');
+        navbar.classList.add('bg-transparent');
+        backToTop.classList.add('opacity-0', 'invisible');
+        backToTop.classList.remove('opacity-100', 'visible');
+      }
+    });
+    
+    // 移动端菜单切换
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuToggle.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+      if (mobileMenu.classList.contains('hidden')) {
+        menuToggle.innerHTML = '<i class="fa fa-bars"></i>';
+      } else {
+        menuToggle.innerHTML = '<i class="fa fa-times"></i>';
+      }
+    });
+    
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        // 关闭移动端菜单
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          menuToggle.innerHTML = '<i class="fa fa-bars"></i>';
+        }
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // 返回顶部按钮
+    backToTop.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // 元素滚动动画
+    const animateOnScroll = function() {
+      const elements = document.querySelectorAll('.card-shadow');
+      
+      elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementPosition < windowHeight - 100) {
+          element.classList.add('opacity-100');
+          element.classList.remove('opacity-0', 'translate-y-8');
+        }
+      });
+    };
+    
+    // 初始加载动画
+    window.addEventListener('load', function() {
+      animateOnScroll();
+    });
+    
+    // 滚动时触发动画
+    window.addEventListener('scroll', function() {
+      animateOnScroll();
+    });
+  </script>
+</body>
+</html>
+    
